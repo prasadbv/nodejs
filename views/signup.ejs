@@ -1,14 +1,13 @@
 <body>
   	<% include header.ejs %>
     <h1><%= title %></h1>
-    <% if(locals.output){ %>
-    	<%=query%>
-    	<%
-    	for(i in locals.output){ %>
-
-   		<h4><%= output[i]%></h4>
-     
-    <% } } %>
+    <% if(errors){ %>
+        <ul>
+            <% for(i in errors){ %>
+            <li><%= errors[i]['msg']%></li>
+            <% } %>
+        </ul>
+    <% } %>
     <div class="content">
         <div class="container-fluid">
             <div class="row">                                                
