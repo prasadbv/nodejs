@@ -1,0 +1,36 @@
+<body>
+  	<% include header.ejs %>
+    <h1>Players Data</h1>
+    <div><a href="/add-player" class="btn btn-sucess">Add Player</a></div>
+    <table class="table">
+    	<tr>
+    		<th>Sno</th>
+    		<th>Id</th>
+            <th>Position</th>
+    		<th>Name</th>
+    		<th>Weight</th>
+    		<th>Height</th>
+    		<th>Birth Place</th>
+    		<th>Age</th>
+    		<th>Birth Date</th>
+    		<th>Actions</th>
+    	</tr>
+    <% if(item) {
+    	for(i in item){ %>
+    	<tr>            
+    		<td><%=Number(i)+1%></td>
+    		<td><%= item[i]['id']%></td>
+            <td><%=item[i]['position']%></td>
+    		<td><%= item[i]['name']%></td>
+    		<td><%= item[i]['weight']%></td>
+    		<td><%= item[i]['height']%></td>
+    		<td><%= item[i]['birthplace']%></td>
+    		<td><%= item[i]['age']%></td>
+    		<td><%= item[i]['birthplace']%></td>
+    		<td><a href="edit/<%=item[i]['_id']%>">Edit</a> | <a href="">Delete</a></td>
+    	</tr>
+   <% }
+	}%>
+	</table>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<body>
+  	<% include header.ejs %>
+    <h1><%= title %></h1>    
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">                                                
+                <div class="col-md-6">
+                    <div class="card">
+                        <form method="post" action="/playerupdate" class="form-horizontal">   
+                            <div class="card-content">
+                                <div class="row">
+                                    <label class="col-sm-2 label-on-left">Position</label>
+                                    <div class="col-sm-4">
+                                        <div class="form-group label-floating is-empty">
+                                            <label class="control-label"></label>
+                                            <input type="text" class="form-control" name="position" value="<%=item[0]['position']%>">
+                                        </div>
+                                    </div>
+                                    <label class="col-sm-2 label-on-left">Name</label>
+                                    <div class="col-sm-4">
+                                        <div class="form-group label-floating is-empty">
+                                            <label class="control-label"></label>
+                                            <input type="text" class="form-control" name="name" value="<%=item[0]['name']%>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label class="col-sm-2 label-on-left">Weight</label>
+                                    <div class="col-sm-4">
+                                        <div class="form-group label-floating is-empty">
+                                            <label class="control-label"></label>
+                                            <input type="text" class="form-control" name="weight" value="<%=item[0]['weight']%>">
+                                        </div>
+                                    </div>
+                                    <label class="col-sm-2 label-on-left">Height</label>
+                                    <div class="col-sm-4">
+                                        <div class="form-group label-floating is-empty">
+                                            <label class="control-label"></label>
+                                            <input type="text" class="form-control" name="height" value="<%=item[0]['height']%>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label class="col-sm-2 label-on-left">Birth Place</label>
+                                    <div class="col-sm-4">
+                                        <div class="form-group label-floating is-empty">
+                                            <label class="control-label"></label>
+                                            <input type="text" class="form-control" name="birthplace" value="<%=item[0]['birthplace']%>">
+                                        </div>
+                                    </div>
+                                    <label class="col-sm-2 label-on-left">Age</label>
+                                    <div class="col-sm-4">
+                                        <div class="form-group label-floating is-empty">
+                                            <label class="control-label"></label>
+                                            <input type="text" class="form-control" name="age" value="<%=item[0]['age']%>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label class="col-sm-2 label-on-left">Number</label>
+                                    <div class="col-sm-4">
+                                        <div class="form-group label-floating is-empty">
+                                            <label class="control-label"></label>
+                                            <input type="text" class="form-control" name="number" value="<%=item[0]['number']%>">
+                                        </div>
+                                    </div>
+                                    <label class="col-sm-2 label-on-left">Birth Date</label>
+                                    <div class="col-sm-4">
+                                        <div class="form-group label-floating is-empty">
+                                            <label class="control-label"></label>
+                                            <input type="text" class="form-control" name="birthdate" value="<%=item[0]['birthdate']%>">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                               <input type="hidden" name="objid" value="<%=item[0]['_id']%>">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <input type="submit" name="submit" value="Save">
+                                    </div>
+                                </div>   
+                            </div>
+                        </form>
+                    </div>
+                </div>                        
+            </div>
+        </div>
+    </div>
+</body>
+</html>
